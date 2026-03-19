@@ -35,8 +35,10 @@ SECRET_KEY = os.getenv('SECRET_KEY', 'django-insecure-local-dev-key-12345')
 # SECURITY WARNING: don't run with debug turned on in production! 
 DEBUG = os.getenv('DEBUG', '0').lower() in ['true', 't', '1'] 
  
-ALLOWED_HOSTS = os.getenv('ALLOWED_HOSTS', '127.0.0.1 localhost').split()
-
+ALLOWED_HOSTS = os.getenv(
+    'ALLOWED_HOSTS',
+    '127.0.0.1 localhost django-images-98w0.onrender.com'
+).split()
 # Application definition
 
 INSTALLED_APPS = [
